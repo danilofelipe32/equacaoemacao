@@ -1,0 +1,5 @@
+{
+  "name": "Equação em Ação",
+  "description": "An educational card game where players solve systems of linear equations to score points. The first player to reach 50 points wins. This app provides a digital version of the game for 2 to 4 players, complete with equation, solution, and special action cards.",
+  "requestFramePermissions": []
+}

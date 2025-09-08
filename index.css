@@ -1,0 +1,76 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #312e81; /* indigo-900 */
+    background-image: 
+        radial-gradient(at 20% 20%, hsla(205,90%,60%,0.2) 0px, transparent 50%),
+        radial-gradient(at 80% 20%, hsla(280,90%,60%,0.2) 0px, transparent 50%),
+        radial-gradient(at 20% 80%, hsla(330,90%,60%,0.2) 0px, transparent 50%),
+        radial-gradient(at 80% 80%, hsla(160,90%,60%,0.2) 0px, transparent 50%);
+    background-size: 100% 100%;
+}
+
+
+@keyframes float-up-fade-out {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+}
+.score-popup {
+    position: absolute;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fde047; /* Tailwind yellow-300 */
+    animation: float-up-fade-out 1.5s ease-out forwards;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px black;
+}
+@keyframes score-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+        color: #fff;
+    }
+}
+.score-text-pulse {
+    animation: score-pulse 0.8s ease-in-out;
+    display: inline-block; /* Needed for transform to work correctly */
+}
+
+/* Custom scrollbar for rules modal */
+.rules-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rules-content::-webkit-scrollbar-track {
+  background: #4f46e5; /* indigo-700 */
+  border-radius: 10px;
+}
+
+.rules-content::-webkit-scrollbar-thumb {
+  background: #22d3ee; /* cyan-400 */
+  border-radius: 10px;
+}
+
+.rules-content::-webkit-scrollbar-thumb:hover {
+  background: #67e8f9; /* cyan-300 */
+}
+
+.card-icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+    background-size: 30px 30px;
+    pointer-events: none;
+}
